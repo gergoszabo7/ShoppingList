@@ -10,7 +10,7 @@
         android:id="@+id/productnametext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="150dp"
         android:text="@string/product_name"
         android:textAlignment="center"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -20,9 +20,11 @@
 
     <EditText
         android:id="@+id/productnameedit"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
+        android:textSize="20sp"
+        android:textAlignment="center"
         app:layout_constraintTop_toBottomOf="@id/productnametext"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -43,11 +45,26 @@
 
     <EditText
         android:id="@+id/quantityedit"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:layout_marginTop="25dp"
+        android:textSize="25sp"
+        android:textAlignment="center"
         app:layout_constraintTop_toBottomOf="@id/quantitytext"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/addbutton"
+        />
+
+    <Button
+        android:id="@+id/addbutton"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:text="Add Item"
+        android:onClick="addItem"
+        app:layout_constraintTop_toBottomOf="@id/quantityedit"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         />
