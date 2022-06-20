@@ -63,7 +63,6 @@
         android:layout_height="50dp"
         android:layout_marginTop="60dp"
         android:text="Add Item"
-        android:onClick="addItem"
         app:layout_constraintTop_toBottomOf="@id/quantityedit"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
