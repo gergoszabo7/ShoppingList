@@ -66,6 +66,21 @@
         app:layout_constraintTop_toBottomOf="@id/quantityedit"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/backbtn"
+        />
+
+    <Button
+        android:id="@+id/backbtn"
+        android:text="@string/back"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addbutton"
+        android:backgroundTint="@color/sec_button"
+        android:textColor="@color/black"
+        android:onClick="goBack"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
