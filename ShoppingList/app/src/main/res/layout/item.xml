@@ -3,48 +3,53 @@
     android:layout_width="match_parent"
     android:layout_height="40dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardElevation="8dp"
-    app:cardCornerRadius="8dp"
-    android:layout_margin="15dp">
+    app:cardElevation="10dp"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp"
+    >
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="3sp">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
+            android:layout_gravity="center"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="name: "
-                android:textSize="18sp"
-                android:layout_marginLeft="25dp"
-                />
             <TextView
                 android:id="@+id/itemname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="item "
-                android:textSize="24sp"
-                android:layout_marginRight="25dp"
+                android:textSize="22sp"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/black"
+                android:layout_weight="1"
                 />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="amount: "
-                android:textSize="18sp"
-                />
+
             <TextView
                 android:id="@+id/amount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="amount"
                 android:textSize="24sp"
+                android:textColor="@color/black"
+                android:layout_gravity="right"
+                android:layout_marginRight="15dp"
+                />
+
+            <ImageButton
+                android:id="@+id/delbtn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/ic_baseline_done_24"
+                android:backgroundTint="#B14A4A"
                 />
 
         </LinearLayout>

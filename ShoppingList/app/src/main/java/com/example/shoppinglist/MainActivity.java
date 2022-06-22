@@ -20,20 +20,21 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    RecyclerView recyclerView;
     DatabaseReference database;
     Adapter adapter;
     ArrayList<Item> list;
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerView = findViewById(R.id.shoplistview);
-        database = FirebaseDatabase.getInstance().getReference().child("Item");
-        recyclerView.setHasFixedSize(true);
+        database = FirebaseDatabase.getInstance().getReference("Item");
+        System.out.println(recyclerView);
+        recyclerView = (RecyclerView)findViewById(R.id.shoppinglist);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setHasFixedSize(true);
 
         list = new ArrayList<>();
         adapter = new Adapter(this,list);
@@ -42,10 +43,12 @@ public class MainActivity extends AppCompatActivity {
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                list.clear();
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                     Item item = dataSnapshot.getValue(Item.class);
                     list.add(item);
                 }
+                adapter.notifyDataSetChanged();
             }
 
             @Override

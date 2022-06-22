@@ -2,7 +2,7 @@ package com.example.shoppinglist;
 
 public class Item {
     private String name;
-    private Integer quantity;
+    private String quantity;
 
     public String getName() {
         return name;
@@ -12,11 +12,11 @@ public class Item {
         this.name = name;
     }
 
-    public Integer getQuantity() {
+    public String getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Integer quantity) {
+    public void setQuantity(String quantity) {
         this.quantity = quantity;
     }
 }

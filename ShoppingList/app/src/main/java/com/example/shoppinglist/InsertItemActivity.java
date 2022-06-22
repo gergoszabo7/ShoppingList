@@ -32,7 +32,7 @@ public class InsertItemActivity extends AppCompatActivity {
             public void onClick(View view) {
                 item = new Item();
                 String name = itemname.getText().toString().trim();
-                int qnty = Integer.parseInt(quantity.getText().toString().trim());
+                String qnty = quantity.getText().toString().trim();
                 item.setName(name);
                 item.setQuantity(qnty);
                 ref.push().setValue(item);
